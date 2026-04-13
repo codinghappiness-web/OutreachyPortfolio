@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness Omale | Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Happiness Omale - Data Scientist, Technical Writer, and Developer Advocate. Showcasing AI, open source, and DevRel contributions.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background Animation Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span>H</span>
+                Happiness Omale
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#featured">Project</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="mailto:omalehappiness1@gmail.com" class="btn btn-primary"
+                        style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Let's
+                        Chat</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="hero" id="home">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap;">
+            <div class="hero-content section visible" style="flex: 1; min-width: 300px;">
+                <span class="subtitle">Data Scientist | Technical Writer | AI Developer Advocate</span>
+                <h1>Hi, I'm <span class="text-gradient">Happiness</span>.</h1>
+                <p>I simplify complex AI and developer tools into clear and practical content. As an Outreachy Applicant
+                    contributing to the Fedora Project, I am passionate about open source, community building, and
+                    making AI accessible for everyone.</p>
+                <div class="hero-btns">
+                    <a href="#featured" class="btn btn-primary">View My Work</a>
+                    <a href="#writing" class="btn btn-secondary">Explore Content</a>
+                </div>
+            </div>
+            <div class="hero-image section visible" style="flex: 1; min-width: 300px; display: flex; justify-content: center; position: relative;">
+                <img src="profile.jpg" alt="Happiness Omale Profile Picture" style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); position: relative; z-index: 2;">
+                <!-- Decorative background behind the image -->
+                <div style="position: absolute; top: 15px; right: -15px; bottom: -15px; left: 15px; border-radius: 20px; background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); z-index: 1; opacity: 0.3; width: 100%; max-width: 400px; height: 100%;"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. About Me -->
+    <section id="about" class="container section">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>I am an AI Developer Advocate bridging the gap between cutting-edge AI tools and the developers who use
+                them. With a core background in <strong>Data Science</strong> and <strong>Technical Writing</strong>, I
+                turn complex systems into simple, easy-to-understand guides and learning materials.</p>
+            <p>My journey is deeply rooted in <strong>Open Source</strong> and <strong>Community Management</strong>. As
+                an AI Developer Advocate, my mission is to champion developer success, foster inclusive tech
+                communities, and demonstrate that complex tools can be made easy to understand.</p>
+            <p>Whether I’m fixing issues with local AI models, writing simple step-by-step guides, or engaging in
+                community discussions, I approach everything with curiosity, care, and attention to detail.</p>
+        </div>
+    </section>
+
+    <!-- 3. Featured Project -->
+    <section id="featured" class="container section">
+        <h2>Featured Contribution</h2>
+        <div class="card featured-project">
+            <div
+                style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h3>Running AI Models Locally with RamaLama</h3>
+                    <span class="subtitle" style="font-size: 1rem; margin-top: 0.5rem;">Outreachy Project • RAG + Model
+                        Transports</span>
+                </div>
+                <a href="https://github.com/codinghappiness-web/Ramalama-SLM-LLM/tree/main" target="_blank"
+                    class="btn btn-primary" style="white-space: nowrap;">
+                    <i class="fa-brands fa-github" style="margin-right: 0.5rem;"></i> View Project
+                </a>
+            </div>
+
+            <p style="margin-top: 1rem;">I set up and tested RamaLama to understand how it makes working with AI models
+                easier using RAG and different model transports.</p>
+
+            <div class="project-grid">
+                <div class="project-details">
+                    <h4>What I Did</h4>
+                    <ul>
+                        <li>Installed RamaLama on my system</li>
+                        <li>Pulled and ran models using different sources (HuggingFace, Ollama, OCI)</li>
+                        <li>Ran prompts like: “What are the Four Foundations of the Fedora Project?”</li>
+                        <li>Documented commands, outputs, and results</li>
+                    </ul>
+
+                    <h4 style="margin-top: 2rem;">Challenges I Faced</h4>
+                    <ul>
+                        <li>The Granite 7B model could not run due to limited memory</li>
+                        <li>I experienced container timeout issues</li>
+                        <li>I ran into GitHub Container Registry (GHCR) authentication errors</li>
+                    </ul>
+                </div>
+
+                <div class="project-details">
+                    <h4>How I Solved Them</h4>
+                    <ul>
+                        <li>Switched to smaller models like Qwen, TinyLlama, and Phi-3</li>
+                        <li>Used the <code>--nocontainer</code> option to avoid Docker issues</li>
+                        <li>Fixed Docker and authentication errors through debugging</li>
+                    </ul>
+
+                    <h4 style="margin-top: 2rem;">What I Learned</h4>
+                    <ul>
+                        <li>Different model sources (HuggingFace, Ollama, OCI) work differently</li>
+                        <li>Running AI locally depends a lot on system resources</li>
+                        <li>Debugging and adapting are very important when working with AI tools</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h4>My Insight: Does RamaLama Make AI Boring?</h4>
+                <p>While working on this project, I started wondering if using tools like RamaLama can sometimes feel
+                    boring or repetitive.</p>
+                <p>I tested different models from HuggingFace, Ollama, and ModelScope using the same question:</p>
+                <p style="font-style: italic; margin-left: 1rem;">“What are the Four Foundations of the Fedora Project?”
+                </p>
+                <p>Most of the models did not give the exact or complete answer. Some answers were partly correct, while
+                    others were unclear.</p>
+                <p>Because of this, I had to repeat the same prompt across multiple models, and it started to feel
+                    repetitive and a bit frustrating.</p>
+                <p>However, this also taught me something important. Even though RamaLama makes it easy to run models,
+                    the quality of the answers depends on the model itself, how it was trained, and how it understands
+                    prompts.</p>
+                <p>So while RamaLama makes the process easier, the results are not always perfect or predictable.</p>
+                <p>In a way, the experience was both:</p>
+                <ul style="margin-bottom: 1rem; margin-top: 0.5rem; padding-left: 1.5rem;">
+                    <li><strong>Boring</strong>, because I had to repeat the same task many times</li>
+                    <li><strong>Insightful</strong>, because it showed the real limitations of AI models</li>
+                </ul>
+                <p>It helped me understand that:</p>
+                <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                    <li>Running AI models is becoming easy</li>
+                    <li>But getting accurate and reliable answers is still a challenge</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Content & Writing -->
+    <section id="writing" class="container section">
+        <h2>Writing</h2>
+        <p>I pride myself on writing for both deeply technical and non-technical audiences, proving my ability to
+            explain concepts simply and craft strong documentation.</p>
+
+        <div class="grid-3">
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">My First Steps Into The Fedora Community As An
+                    Outreachy Applicant</h3>
+                <p style="flex-grow: 1;">An introductory post detailing my initial steps and experiences joining the
+                    Fedora community.</p>
+                <a href="https://medium.com/@omalehappiness1/my-first-steps-into-the-fedora-community-as-an-outreachy-applicant-6e67c62cca80"
+                    target="_blank" class="btn btn-secondary"
+                    style="font-size: 0.9rem; padding: 0.5rem 1rem; align-self: flex-start; margin-top: 1rem;">View Blog
+                    Post</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">How To Fix Fedora Profile Picture Issues With
+                    Libravatar</h3>
+                <p style="flex-grow: 1;">A technical documentation guide on resolving Libravatar profile picture setups
+                    within Fedora.</p>
+                <a href="https://medium.com/@omalehappiness1/how-to-fix-fedora-profile-picture-issues-with-libravatar-2c0babd1b8b3"
+                    target="_blank" class="btn btn-secondary"
+                    style="font-size: 0.9rem; padding: 0.5rem 1rem; align-self: flex-start; margin-top: 1rem;">View Blog
+                    Post</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">A Guide To Getting Started With Outreachy
+                    Contributions</h3>
+                <p style="flex-grow: 1;">A comprehensive onboarding guide helping new applicants navigate Outreachy
+                    effectively.</p>
+                <a href="https://medium.com/@omalehappiness1/a-guide-to-getting-started-with-outreachy-contributions-287bcd885c1f"
+                    target="_blank" class="btn btn-secondary"
+                    style="font-size: 0.9rem; padding: 0.5rem 1rem; align-self: flex-start; margin-top: 1rem;">View Blog
+                    Post</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem;">Getting Started with RamaLama: Running AI Models Using Multiple Transport</h3>
+                <p style="flex-grow: 1;">A technical guide exploring how to seamlessly run various AI models utilizing
+                    multiple model transports.</p>
+                <a href="https://medium.com/@omalehappiness1/getting-started-with-ramalama-running-ai-models-using-multiple-transport-1d5baba3c69e" target="_blank" class="btn btn-secondary"
+                    style="font-size: 0.9rem; padding: 0.5rem 1rem; align-self: flex-start; margin-top: 1rem;">View Blog
+                    Post</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Collaboration & Community / Social Impact -->
+    <section id="community" class="container section">
+        <h2>Community & Advocacy</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3><i class="fa-solid fa-users" style="color: var(--accent-blue); margin-right: 0.5rem;"></i>
+                    Collaboration & Support</h3>
+                <ul class="project-details" style="margin-top: 1rem; padding-left: 0;">
+                    <ul>
+                        <li>Collaborated with Ibrahim on a discussion topic on the fedora discussion chat titled <a
+                                href="https://discussion.fedoraproject.org/t/libravatar-guide-how-to-set-your-fedora-profile-picture-without-issues/184311"
+                                target="_blank"
+                                style="color: var(--accent-blue); text-decoration: underline;">'Libravatar Guide: How to
+                                Set Your Fedora Profile Picture Without Issues'</a>.</li>
+                        <li>Collaborated with Njeri Kimaru on fedora discussion chat on a topic titled <a
+                                href="https://discussion.fedoraproject.org/t/working-with-fedora-using-a-virtual-machine-vmware/184968"
+                                target="_blank" style="color: var(--accent-blue); text-decoration: underline;">'Working
+                                with Fedora using a Virtual Machine(VMware)'</a>.</li>
+                        <li>Engaged with discussions on the Matrix chat.</li>
+                        <li>Dedicated to the peer-to-peer review support and knowledge sharing.</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-bullhorn" style="color: var(--accent-purple); margin-right: 0.5rem;"></i>
+                    Social Impact & Voice</h3>
+                <ul class="project-details" style="margin-top: 1rem; padding-left: 0;">
+                    <ul>
+                        <li>Publicly documented my Outreachy tech journey on <a
+                                href="https://www.linkedin.com/posts/happiness-omale_fedora-share-7442895780610334720-pbci?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_B0EABiuJajoQlGOzxgqXYYa73zqNNIkk"
+                                target="_blank"
+                                style="color: var(--accent-purple); text-decoration: underline;">LinkedIn</a> and <a
+                                href="https://x.com/Coding_Happinex/status/2037132811853811997" target="_blank"
+                                style="color: var(--accent-purple); text-decoration: underline;">X (Twitter)</a>.</li>
+                        <li>Evangelized blog posts to help onboard the next wave of open-source contributors.</li>
+                        <li>Strong vocal advocate for open source sustainability and accessible AI tools.</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Proof of Work -->
+    <section id="proof-of-work" class="container section">
+        <h2>Proof of Work Links</h2>
+        <div class="grid-3">
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-brands fa-github"
+                        style="margin-right: 0.5rem;"></i> GitHub Project</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">RamaLama-SLM-LLM complete Outreachy
+                    project repository.</p>
+                <a href="https://github.com/codinghappiness-web/Ramalama-SLM-LLM/tree/main" target="_blank"
+                    class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-brands fa-medium"
+                        style="margin-right: 0.5rem;"></i> Blog: First Steps</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">My first steps into the Fedora
+                    community as an Outreachy applicant.</p>
+                <a href="https://medium.com/@omalehappiness1/my-first-steps-into-the-fedora-community-as-an-outreachy-applicant-6e67c62cca80"
+                    target="_blank" class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-brands fa-medium"
+                        style="margin-right: 0.5rem;"></i> Blog: Libravatar</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">Fixing Fedora profile picture issues
+                    with Libravatar.</p>
+                <a href="https://medium.com/@omalehappiness1/how-to-fix-fedora-profile-picture-issues-with-libravatar-2c0babd1b8b3"
+                    target="_blank" class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-brands fa-medium"
+                        style="margin-right: 0.5rem;"></i> Blog: Outreachy Contributions</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">A complete guide to getting started
+                    with Outreachy contributions.</p>
+                <a href="https://medium.com/@omalehappiness1/a-guide-to-getting-started-with-outreachy-contributions-287bcd885c1f"
+                    target="_blank" class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-comments"
+                        style="margin-right: 0.5rem;"></i> Fedora Chat: Libravatar</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">Collaboration discussion on the Fedora
+                    Profile Picture Guide.</p>
+                <a href="https://discussion.fedoraproject.org/t/libravatar-guide-how-to-set-your-fedora-profile-picture-without-issues/184311"
+                    target="_blank" class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-comments"
+                        style="margin-right: 0.5rem;"></i> Fedora Chat: VMware</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">Collaboration on working with Fedora
+                    using a Virtual Machine.</p>
+                <a href="https://discussion.fedoraproject.org/t/working-with-fedora-using-a-virtual-machine-vmware/184968"
+                    target="_blank" class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-brands fa-linkedin"
+                        style="margin-right: 0.5rem;"></i> LinkedIn Post</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">Publicly documented updates and
+                    reflections on my tech journey.</p>
+                <a href="https://www.linkedin.com/posts/happiness-omale_fedora-share-7442895780610334720-pbci?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_B0EABiuJajoQlGOzxgqXYYa73zqNNIkk"
+                    target="_blank" class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-brands fa-x-twitter"
+                        style="margin-right: 0.5rem;"></i> X (Twitter) Thread</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">Live thread tracking my ongoing
+                    Outreachy tasks and milestones.</p>
+                <a href="https://x.com/Coding_Happinex/status/2037132811853811997" target="_blank"
+                    class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+
+            <div class="card article-card" style="display: flex; flex-direction: column;">
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-brands fa-medium"
+                        style="margin-right: 0.5rem;"></i> Blog: RamaLama AI</h4>
+                <p style="flex-grow: 1; font-size: 0.95rem; margin-bottom: 1rem;">Getting started with RamaLama and running AI models utilizing multiple model transports.</p>
+                <a href="https://medium.com/@omalehappiness1/getting-started-with-ramalama-running-ai-models-using-multiple-transport-1d5baba3c69e" target="_blank"
+                    class="btn btn-secondary"
+                    style="align-self: flex-start; font-size: 0.85rem; padding: 0.4rem 0.8rem;">View Link</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Skills -->
+    <section id="skills" class="container section">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-tag"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill-tag"><i class="fa-solid fa-brain"></i> Machine Learning / AI</div>
+            <div class="skill-tag"><i class="fa-solid fa-pen-nib"></i> Technical Writing</div>
+            <div class="skill-tag"><i class="fa-brands fa-osi"></i> Open Source</div>
+            <div class="skill-tag"><i class="fa-solid fa-people-group"></i> Community Management</div>
+            <div class="skill-tag"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="skill-tag"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+                    width="20" alt="HF"> HuggingFace</div>
+            <div class="skill-tag">Ollama</div>
+            <div class="skill-tag">RamaLama</div>
+        </div>
+    </section>
+
+    <!-- 8. Call to Action -->
+    <section id="contact" class="container section cta-section">
+        <h2 class="text-gradient">Let's Collaborate</h2>
+        <p style="margin: 0 auto 2rem auto; max-width: 600px;">I am currently open to Developer Advocacy, Technical
+            Writing, and AI related opportunities. Whether you want to discuss a role, collaborate on open source, or
+            talk about local LLMs, my inbox is open.</p>
+        <a href="mailto:omalehappiness1@gmail.com" class="btn btn-primary"
+            style="font-size: 1.25rem; padding: 1rem 2.5rem;">Reach Out Now</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Happiness Omale. Built with passion & AI.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
